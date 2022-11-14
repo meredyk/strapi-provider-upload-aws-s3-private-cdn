@@ -1,5 +1,5 @@
 {
-  "name": "strapi-provider-upload-aws-s3-private",
+  "name": "strapi-provider-upload-aws-s3-private-cdn",
   "version": "1.0.1",
   "description": "AWS S3 provider for strapi upload",
   "homepage": "https://strapi.io",
@@ -23,19 +23,19 @@
     "isProvider": true
   },
   "author": {
-    "email": "rita.cristian@gmail.com",
-    "name": "Cristian Rita",
-    "url": "https://cristianrita.ro"
+    "email": "gustavo@meredyk.com.br",
+    "name": "Gustavo Meredyk",
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cristian-rita/strapi-provider-upload-aws-s3-private"
+    "url": "git://github.com/meredyk/strapi-provider-upload-aws-s3-private-cdn"
   },
   "bugs": {
     "url": "https://github.com/cristian-rita/strapi-provider-upload-aws-s3-private/issues"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=10.16.0 <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT",

@@ -1,9 +1,9 @@
-# strapi-provider-upload-aws-s3-private
+# strapi-provider-upload-aws-s3-private-cnd
 
 ## Description
 
-This version of provider is identical with the offical one [here](https://github.com/strapi/strapi/blob/master/packages/strapi-provider-upload-aws-s3/), the only difference being that the ACL: 'public-read' config is removed. 
-This is useful if you want to keep the bucket private. 
+This version of provider is identical with the offical one [here](https://github.com/strapi/strapi/blob/master/packages/strapi-provider-upload-aws-s3/) and [here](https://github.com/cristian-rita/strapi-provider-upload-aws-s3-private)(ACL: 'public-read' config is removed). 
+This is useful if you want to keep the bucket private and use cdn url. 
 
 ### Important
 
@@ -23,11 +23,12 @@ See the [using a provider](https://strapi.io/documentation/developer-docs/latest
 module.exports = ({ env }) => ({
   // ...
   upload: {
-    provider: 'aws-s3-private',
+    provider: 'aws-s3-private-cdn',
     providerOptions: {
       accessKeyId: env('AWS_ACCESS_KEY_ID'),
       secretAccessKey: env('AWS_ACCESS_SECRET'),
       region: env('AWS_REGION'),
+      cdn: env('CDN'),
       params: {
         Bucket: env('AWS_BUCKET'),
       },
@@ -45,7 +46,7 @@ This is also working with IAM roles. You just need to omit the accessKeyId and s
 module.exports = ({ env }) => ({
   // ...
   upload: {
-    provider: 'aws-s3-private',
+    provider: 'aws-s3-private-cdn',
     providerOptions: {
       region: env('AWS_REGION'),
       params: {
@@ -56,6 +57,8 @@ module.exports = ({ env }) => ({
   // ...
 });
 ```
+
+
 
 ## Links
 
